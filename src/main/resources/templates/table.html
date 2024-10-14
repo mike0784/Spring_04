@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Телефон</th>
+            <th>Дата рождения</th>
+        </tr>
+        <tr th:each="user: ${user}">
+            <td th:text="${user.getId()}"></td>
+            <td th:text="${user.getSurname()}"></td>
+            <td th:text="${user.getName()}"></td>
+            <td th:text="${user.getPatronymic()}"></td>
+            <td th:text="${user.getTelephone()}"></td>
+            <td th:text="${user.getDateofbirth()}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
